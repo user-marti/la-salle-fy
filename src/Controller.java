@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
-public class LasallefyController {
+public class Controller {
     private ArrayList<Song> biblioteca;
     private ArrayList<Playlist> llistes;
 
-    public LasallefyController() {
+    public Controller() {
         this.biblioteca = new ArrayList<>();
         this.llistes = new ArrayList<>();
     }

@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        LasallefyController control = new LasallefyController();
+        Controller control = new Controller();
         String opcio = "";
 
         // Dades inicials per provar (com demana l'entrega)

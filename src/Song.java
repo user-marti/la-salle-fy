@@ -29,7 +29,8 @@ public class Song {
 
     @Override
     public String toString() {
-        String tag = isPlayable() ? "[PLAYABLE]" : "[NOT]"; //
-        return tag + " " + title + " - " + artist;
+        String tag = isPlayable() ? "[PLAYABLE]" : "[NOT]";
+        // AFEGIM "ID: " + id PERQUÈ L'USUARI HO VEGI
+        return tag + " ID: " + id + " | " + title + " - " + artist;
     }
 }

@@ -24,7 +24,11 @@ public class Main {
                     control.llistarCançons();
                     break;
                 case "2":
-                    System.out.print("ID de la canço: ");
+                    System.out.println("\n--- Cançons disponibles ---");
+                    control.llistarCançons(); // Aprofitem el mètode que ja tenies!
+                    System.out.println("---------------------------");
+
+                    System.out.print("Escriu l'ID de la canço a reproduir: ");
                     String id = sc.nextLine();
                     control.reproduirCanço(id);
                     break;

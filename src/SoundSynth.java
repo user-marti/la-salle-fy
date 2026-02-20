@@ -1,5 +1,4 @@
 public abstract class SoundSynth {
-    // Mètode
     public abstract void makeSound(double frequency, int durationMs);
 
     public void playSilence(int durationMs) {

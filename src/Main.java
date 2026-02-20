@@ -6,7 +6,7 @@ public class Main {
         Controller control = new Controller();
         String opcio = "";
 
-        // Dades inicials per provar (com demana l'entrega)
+        // Dades inicials
         Song s1 = new Song("1", "Imagine", "Lennon", 180, Mood.HAPPY, "Pop");
         s1.addNote(new Note(440.0, 500, WaveType.SINE)); // Afegim una nota
         control.afegirCanço(s1);

@@ -1,6 +1,6 @@
 public class Note {
     private double frecuencia; // en herzios
-    private int tiempo;       // en milisegundos
+    private int tiempo;        // en milisegundos
     private WaveType wt;       // timbre
 
     // Constructor principal

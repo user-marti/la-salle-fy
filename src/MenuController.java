@@ -17,4 +17,12 @@ public class MenuController implements Menu{
     public String getString() {
         return sc.nextLine();
     }
+
+    public void showMainMenu() {
+        show("\nLasallefy");
+        show("1. Llistar cançons");
+        show("2. Reproduir canço");
+        show("Q. Sortir");
+        show("Tria: ");
+    }
 }

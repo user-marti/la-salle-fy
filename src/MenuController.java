@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
-public class MenuController implements Menu{
-    Scanner sc = new Scanner(System.in);
+public class MenuController implements Menu {
+    private Scanner sc = new Scanner(System.in);
 
     @Override
     public void show(String s) {
@@ -10,7 +10,12 @@ public class MenuController implements Menu{
 
     @Override
     public Integer getInteger() {
-        return sc.nextInt();
+        try {
+            String input = sc.nextLine();
+            return Integer.parseInt(input);
+        } catch (NumberFormatException e) {
+            return -1; 
+        }
     }
 
     @Override
@@ -20,9 +25,10 @@ public class MenuController implements Menu{
 
     public void showMainMenu() {
         show("\nLasallefy");
-        show("1. Llistar cançons");
-        show("2. Reproduir canço");
+        show("1. Gestionar cançons");
+        show("2. Gestionar playlists");
+        show("3. Reproduir");
         show("Q. Sortir");
-        show("Tria: ");
+        System.out.print("Tria una opció: ");
     }
 }

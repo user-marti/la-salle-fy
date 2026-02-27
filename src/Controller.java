@@ -1,8 +1,39 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Controller {
     private ArrayList<Song> biblioteca;
     private ArrayList<Playlist> llistes;
+    private Scanner sc = new Scanner(System.in);
+
+    public void run() {
+        Controller control = new Controller();
+        String opcio = "";
+
+        while (!opcio.equals("Q")) {
+            System.out.println("\nLasallefy");
+            System.out.println("1. Llistar cançons");
+            System.out.println("2. Reproduir canço");
+            System.out.println("Q. Sortir");
+            System.out.print("Tria: ");
+            opcio = sc.nextLine().toUpperCase();
+
+            switch (opcio) {
+                case "1":
+                    control.llistarCançons();
+                    break;
+                case "2":
+                    System.out.println("\n--- Cançons disponibles ---");
+                    control.llistarCançons();
+                    System.out.println("---------------------------");
+
+                    System.out.print("Escriu l'ID de la canço a reproduir: ");
+                    String id = sc.nextLine();
+                    control.reproduirCanço(id);
+                    break;
+            }
+        }
+    }
 
     public Controller() {
         this.biblioteca = new ArrayList<>();

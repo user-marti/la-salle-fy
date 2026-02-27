@@ -17,20 +17,24 @@ public class Song {
     }
 
     // Mètodes
-    public void addNote(Note n) { notes.add(n); }
+    public void addNote(Note n) { 
+        notes.add(n); 
+    }
 
-    public boolean isPlayable() { return !notes.isEmpty(); } //
+    public boolean isPlayable() { 
+        return !notes.isEmpty(); 
+    }
 
-    // Getters
+    // GETTERS
     public String getId() { return id; }
     public String getTitle() { return title; }
-    public List<Note> getNotes() { return notes; }
-
+    public List<Note> getNotes() { return notes; }    
+    public int getDurationSeconds() { return durationSeconds; }
 
     @Override
     public String toString() {
-        String tag = isPlayable() ? "[PLAYABLE]" : "[NOT]";
-        // AFEGIM "ID: " + id PERQUÈ L'USUARI HO VEGI
-        return tag + " ID: " + id + " | " + title + " - " + artist;
+        String tag = isPlayable() ? "[PLAYABLE]" : "[NOT PLAYABLE]";
+        return tag + " ID: " + id + " | " + title + " - " + artist + 
+               " (" + durationSeconds + "s) | Mood: " + mood + " | Estil: " + style;
     }
 }
